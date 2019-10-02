@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- notify Notepad that this document is html type -->
+<html lang="en"> <!-- start html code and declare language of page as English -->
+
+
+<head> <!-- head tag to declare the title of the page, what style, and how the page will behave -->
+
+	<title> Customer Information </title> <!-- Title tag for page's name -->
+
+	<link rel="stylesheet" href="D4CSSFile.css"> <!-- Refer to the CSS file to style the page -->
+
+	<script> <!-- JavaScript code to control the behavior of the page -->
+		function formValidation() <!-- define the validation function of the page -->
+   			{
+				<!-- declare all variables -->
+				var checkFirstName = document.forms["CInfo"]["firstname"].value;
+				var checkLastName = document.forms["CInfo"]["lastname"].value;
+				var checkEmail = document.forms["CInfo"]["email"].value;
+				<!-- conditional statement to check user input and alert user-->
+				if (checkFirstName == "" || checkLastName == "" || checkEmail == "")
+				{
+					alert("You are missing some information. Please fill in all the information!");
+					return false;
+				}
+				else
+				{
+					alert("You have checked in. Thank you and have fun!")		
+				} <!-- end of conditional statement -->
+   			} <!-- end of validation function -->
+	</script>
+
+</head> <!-- end of head tag -->
+
+
+<body> <!-- body tag to display the content of the page -->
+
+	<h1> Customer Information </h1> <!-- the most important heading of the page -->
+
+	<p> Please enter the following information: </p> <!-- paragraph tag -->
+
+	<!-- form tag to display form to collect user inputs and submit button -->
+	<form name="CInfo" onsubmit="return formValidation()" method="post"> <!-- return to written validation function when user click submit to check --> 
+   		First name: <br> <input type="text" name="firstname"> <br>
+   		Last name: <br> <input type="text" name="lastname"> <br>
+   		Email: <br> <input type="email" name="email"> <br> <br>
+   		<input type="submit" value="Submit">
+ 	</form> <!-- end of form tag -->
+
+</body> <!-- end of body content -->
+
+
+</html> <!-- end of html -->

@@ -1,0 +1,29 @@
+body 
+{
+background: Black;
+}
+
+h1 
+{
+text-align: center;
+color: Tomato;
+}
+
+p
+{
+text-align: center;
+color: Tomato;
+}
+
+form 
+{
+text-align: center;
+color: Tomato;
+font-weight: bold;
+}
+
+button 
+{
+background-color: Tomato;
+font-weight: bold;
+}
